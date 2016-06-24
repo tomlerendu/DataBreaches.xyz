@@ -1,0 +1,70 @@
+$standard-padding: 1.5rem;
+$large-padding: 2rem;
+
+$icon-font-path: 'fonts/';
+$text-color: #2b2b2b;
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
+
+$brand-primary: #237bad;
+$navbar-height: 70px;
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker";
+
+.padding-0 {
+  padding: 0;
+}
+
+.gap-top {
+  margin-top: $standard-padding;
+}
+
+.gap-bottom {
+  margin-bottom: $standard-padding;
+}
+
+.inline-form
+{
+  margin: 0;
+  display: inline;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  padding: 1.5rem;
+  background: #e4edea;
+}
+
+.site {
+  background: white;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
+.site-nav {
+  margin-bottom: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+main {
+  padding: $standard-padding;
+}
+
+.intro-header {
+  padding: $large-padding;
+  @include gradient-vertical(#2872ad, #208fad, 0%, 100%);
+  color: white;
+}
+
+@import "company";
+@import "timeline";
+@import "breadcrumbs";

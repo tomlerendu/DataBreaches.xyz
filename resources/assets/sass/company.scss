@@ -1,0 +1,77 @@
+$company-poor-color: #b8001f;
+$company-poor-secondary-color: #b81f00;
+$company-variable-color: #db6600;
+$company-variable-secondary-color: #dbaf00;
+$company-good-color: #c8cf00;
+$company-good-secondary-color: #83cf00;
+$company-excellent-color: #1a9900;
+$company-excellent-secondary-color: #009919;
+
+.company {
+
+  padding: 1rem 2rem;
+
+  h1.company-name {
+    a {
+      color: white;
+    }
+  }
+
+  ul.company-tags {
+    padding: 0;
+    font-size: 1.1rem;
+
+    li {
+      display: inline-block;
+      margin-right: 0.5rem;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .company-score {
+    background: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    width: 8rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+
+    .company-score-text {
+      color: #383838;
+      font-size: 1rem;
+    }
+  }
+
+  ul.company-facts {
+    color: white;
+    padding-left: 1rem;
+  }
+}
+
+.company.company-poor {
+  background-color: $company-poor-color;
+  @include gradient-vertical($company-poor-color, $company-poor-secondary-color, 0%, 100%)
+}
+
+.company.company-variable {
+  background: $company-variable-color;
+  @include gradient-vertical($company-variable-color, $company-variable-secondary-color, 0%, 100%)
+}
+
+.company.company-good {
+  background: $company-good-color;
+  @include gradient-vertical($company-good-color, $company-good-secondary-color, 0%, 100%)
+
+}
+
+.company.company-excellent {
+  background: $company-excellent-color;
+  @include gradient-vertical($company-excellent-color, $company-excellent-secondary-color, 0%, 100%)
+
+}

@@ -1,0 +1,22 @@
+.top-breadcrumbs {
+
+  font-size: 1.2rem;
+
+  ol {
+    list-style-type: none;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+
+    li {
+      display: inline-block;
+      margin-right: 0.7rem;
+    }
+
+    li.top-breadcrumb {
+      color: #bdbdbd;
+    }
+  }
+
+}
