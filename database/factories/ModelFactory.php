@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\UserRankEnum;
+
 /**
  * Adds mock record revision info to a record.
  *
@@ -7,8 +9,6 @@
  * @param \Faker\Generator $faker
  * @return array
  */
-use App\Models\UserRankEnum;
-
 $appendRevisionMock = function (array $record, Faker\Generator $faker): array
 {
     $revision = [
