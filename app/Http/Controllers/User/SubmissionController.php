@@ -12,6 +12,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class SubmissionController extends Controller
 {
@@ -42,9 +43,9 @@ class SubmissionController extends Controller
      * Submit an organisation for approval.
      *
      * @param Request $request The HTTP request
-     * @return Response The HTTP response
+     * @return View
      */
-    public function submitOrganisation(Request $request): Response
+    public function submitOrganisation(Request $request): View
     {
         $data['tags'] = Tag::all();
 
@@ -152,9 +153,9 @@ class SubmissionController extends Controller
      *
      * @param Request $request The HTTP request
      * @param int $organisationId The organisation ID
-     * @return Response The HTTP response The HTTP response
+     * @return View
      */
-    public function submitBreach(Request $request, int $organisationId): Response
+    public function submitBreach(Request $request, int $organisationId): View
     {
         $organisation = null;
 
