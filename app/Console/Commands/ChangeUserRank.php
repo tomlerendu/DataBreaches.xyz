@@ -13,7 +13,7 @@ class ChangeUserRank extends Command
      *
      * @var string
      */
-    protected $signature = 'user:rank';
+    protected $signature = 'user:rank {username} {rank}';
 
     /**
      * The console command description.
@@ -39,12 +39,8 @@ class ChangeUserRank extends Command
      */
     public function handle()
     {
-        if (!$this->hasArgument('username')) {
-            $this->error('Missing username argument.');
-        }
-
-        if (!$this->hasArgument('rank') && in_array($this->argument('rank'), ['user', 'editor'])) {
-            $this->error('Missing or invalid rank argument');
+        if (in_array($this->argument('rank'), ['user', 'editor'])) {
+            $this->error('Invalid rank argument');
         }
 
         $username = $this->argument('username');
