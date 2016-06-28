@@ -39,17 +39,18 @@ class ChangeUserRank extends Command
      */
     public function handle()
     {
-        if (in_array($this->argument('rank'), ['user', 'editor'])) {
+        if (!in_array($this->argument('rank'), ['user', 'editor'])) {
             $this->error('Invalid rank argument');
+        } else {
+
+            $username = $this->argument('username');
+            $rank = $this->argument('rank');
+
+            $user = User::where('username', $username)->firstOrFail();
+            $user->rank = $rank == 'editor' ? UserRankEnum::Editor : UserRankEnum::User;
+            $user->save();
+
+            $this->info('The users rank was updated to ' . $rank . '.');
         }
-
-        $username = $this->argument('username');
-        $rank = $this->argument('rank');
-
-        $user = User::where('username', $username)->firstOrFail();
-        $user->rank = $rank == 'editor' ? UserRankEnum::Editor : UserRankEnum::User;
-        $user->save();
-
-        $this->info('The users rank was updated to ' . $rank . '.');
     }
 }
