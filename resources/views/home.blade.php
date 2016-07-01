@@ -4,7 +4,7 @@
 
     <div class="intro-header">
         <h1>What is {{ config('app.name') }}?</h1>
-        <p>{{ config('app.name') }} categorieses how well an organisation handles your personal information. Each organisation is assigned a score based on the number of data breaches they have had and how well they have reacted to them.</p>
+        <p>{{ config('app.name') }} categorises how well an organisation handles your personal information. Each organisation is assigned a score based on the number of data breaches they have had and how well they have reacted to them.</p>
     </div>
 
 @endsection

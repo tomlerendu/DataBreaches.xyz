@@ -1,6 +1,6 @@
 # DataBreaches.xyz
 
-[DataBreaches.xyz](https://databreaches.xyz) is a website that categorieses how well an organisation handles your personal information. Each organisation is assigned a score based on the number of data breaches they have had and how well they have reacted to them.
+[DataBreaches.xyz](https://databreaches.xyz) is a website that categorises how well an organisation handles your personal information. Each organisation is assigned a score based on the number of data breaches they have had and how well they have reacted to them.
 
 This project is under the MIT licence. The website code is available for reuse and modification without restriction. Code contributions to this repository are welcome.
 
