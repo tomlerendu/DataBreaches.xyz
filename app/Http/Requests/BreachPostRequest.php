@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\BreachData;
+use Illuminate\Support\Facades\Auth;
 
 class BreachPostRequest extends Request
 {
