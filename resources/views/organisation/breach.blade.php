@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', $organisation['name'])
+@section('title', $breaches[0]->date_occurred->format(config('date.short')) . ' breach - ' . $organisation['name'])
 
 @section('header')
 
